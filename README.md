@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/parmegv/ansible-onionperf.svg?branch=master)](https://travis-ci.org/parmegv/ansible-onionperf)
+
 Role Name
 =========
 
