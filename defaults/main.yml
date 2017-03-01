@@ -1,0 +1,5 @@
+---
+# defaults file for ansible-onionperf
+repo: "https://github.com/robgjansen/onionperf.git" # Git repository
+git_tag: "master" # Git branch or tag to check out
+virtualenv_path: "" # Virtual Environment where Onionperf will be installed

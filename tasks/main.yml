@@ -1,0 +1,12 @@
+---
+# tasks file for ansible-onionperf
+- assert:
+    that:
+      - "virtualenv_path is defined"
+
+- name: Install onionperf via pip git
+  pip:
+    name: "git+{{ repo }}"
+    editable: false
+    virtualenv: "{{ virtualenv_path }}"
+  when: virtualenv_path is defined
