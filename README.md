@@ -15,9 +15,9 @@ Role Variables
 
 virtualenv_path must be defined, in order for pip to install Onionperf.
 
-	repo: "https://github.com/robgjansen/onionperf.git" # Git repository
-	git_tag: "master" # Git branch or tag to check out
-	virtualenv_path: "" # Virtual Environment where Onionperf will be installed
+	onionperf_git_repo: "https://github.com/robgjansen/onionperf.git" # Git repository
+	onionperf_git_tag: "master" # Git branch or tag to check out
+	onionperf_virtualenv_path: "" # Virtual Environment where Onionperf will be installed
 
 Example Playbook
 ----------------
@@ -26,7 +26,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: parmegv.ansible-onionperf, virtualenv-path: "~/.virtualenvs/tor-browser-crawler" }
+         - { role: parmegv.ansible-onionperf, onionperf_virtualenv_path: "~/.virtualenvs/tor-browser-crawler" }
 
 License
 -------

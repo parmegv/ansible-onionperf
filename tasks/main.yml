@@ -6,7 +6,7 @@
 
 - name: Install onionperf via pip git
   pip:
-    name: "git+{{ repo }}"
+    name: "git+{{ onionperf_git_repo }}"
     editable: false
-    virtualenv: "{{ virtualenv_path }}"
+    virtualenv: "{{ onionperf_virtualenv_path }}"
   when: virtualenv_path is defined
