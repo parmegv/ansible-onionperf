@@ -1,2 +1,3 @@
 ---
 # vars file for ansible-onionperf
+onionperf_path: {{ onionperf_dirpath }}/{{ onionperf_dirname }}
