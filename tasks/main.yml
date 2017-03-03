@@ -1,14 +1,6 @@
 ---
 # tasks file for ansible-onionperf
-- name: Install onionperf via pip git
-  pip:
-    name: "git+{{ onionperf_git_repo }}"
-    editable: false
-    virtualenv: "{{ onionperf_virtualenv_path }}"
-  when: onionperf_virtualenv_path != ""
+- include: clone-repository.yml
 
-- name: Clone onionperf
-  git:
-    repo={{ onionperf_git_repo }}
-    dest={{ onionperf_dirpath }}/{{ onionperf_dirname }}
-  when: onionperf_virtualenv_path == ""
+- include: install-in-virtualenv.yml
+  when: onionperf_virtualenv_path != ""
