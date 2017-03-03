@@ -10,5 +10,5 @@
 - name: Clone onionperf
   git:
     repo={{ onionperf_git_repo }}
-    dest={{ onionperf_dirpath }}
+    dest={{ onionperf_dirpath }}/{{ onionperf_dirname }}
   when: onionperf_virtualenv_path == ""
