@@ -5,9 +5,10 @@
     name: "git+{{ onionperf_git_repo }}"
     editable: false
     virtualenv: "{{ onionperf_virtualenv_path }}"
-  when: virtualenv_path is defined
+  when: onionperf_virtualenv_path != ""
 
 - name: Clone onionperf
   git:
     repo={{ onionperf_git_repo }}
     dest={{ onionperf_dirpath }}
+  when: onionperf_virtualenv_path == ""
